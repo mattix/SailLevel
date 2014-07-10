@@ -52,6 +52,16 @@ Page {
         }
 
         Rectangle {
+            id: levelTargetBall
+            color: "gray"
+            x: parent.width / 2 - width / 2
+            y: parent.height / 2 - height / 2
+            width: levelBall.width * 1.5
+            height: levelBall.height * 1.5
+            radius: width
+        }
+
+        Rectangle {
             id: levelBall
             property double offsetX: 0.0
             property double offsetY: 0.0
@@ -59,6 +69,18 @@ Page {
             y: parent.height / 2 - height / 2 - (offsetY / 90.0) * (parent.height / 2)
             radius: width
             color: "white"
+        }
+
+        Rectangle {
+            id: levelTargetBorderBall
+            color: "#00000000"
+            x: parent.width / 2 - width / 2
+            y: parent.height / 2 - height / 2
+            width: levelBall.width
+            height: levelBall.height
+            radius: width
+            border.color: "black"
+            border.width: 5
         }
 
         Label {
