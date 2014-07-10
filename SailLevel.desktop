@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=SailLevel
+Exec=SailLevel
+Name=SailLevel
+# translation example:
+# your app name in German locale (de)
+Name[de]=SailLevel
+
