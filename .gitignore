@@ -25,4 +25,6 @@ Makefile*
 
 # QtCreator
 
+rpm
+
 *.autosave
