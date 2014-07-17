@@ -23,9 +23,14 @@
 #include <QtQuick>
 #endif
 
+#include <QtQml>
+
 #include <sailfishapp.h>
+#include "settings.h"
 
 int main(int argc, char *argv[])
 {
+    qmlRegisterType<Settings>("mattix", 1, 0, "Settings");
+
     return SailfishApp::main(argc, argv);
 }
