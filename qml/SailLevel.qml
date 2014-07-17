@@ -25,11 +25,12 @@ import "pages"
 
 ApplicationWindow
 {
+    id: appWindow
     initialPage: Component
     {
         LevelPage
         {
-
+            onCalibrated: appWindow.cover = Qt.resolvedUrl("cover/CoverPage.qml")
         }
     }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
