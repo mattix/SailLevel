@@ -5,6 +5,5 @@ Icon=SailLevel
 Exec=SailLevel
 Name=SailLevel
 # translation example:
-# your app name in German locale (de)
-Name[de]=SailLevel
+Name[fi]=SailLevel
 
