@@ -19,7 +19,7 @@ OTHER_FILES += qml/SailLevel.qml \
 
 
 CONFIG += sailfishapp_i18n
-TRANSLATIONS += translations/harbour-saillevel-fi.ts
+#TRANSLATIONS += translations/harbour-saillevel-fi.ts
 
 HEADERS += \
     src/settings.h

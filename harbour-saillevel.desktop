@@ -4,6 +4,6 @@ X-Nemo-Application-Type=silica-qt5
 Icon=SailLevel
 Exec=SailLevel
 Name=SailLevel
-# translation example:
-Name[fi]=SailLevel
+
+#Name[fi]=SailLevel
 
