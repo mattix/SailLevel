@@ -14,7 +14,6 @@ OTHER_FILES += qml/SailLevel.qml \
     SailLevel.desktop \
     qml/items/Cross.qml \
     qml/items/LevelItem.qml \
-    icons/SailLevel.png \
     rpm/SailLevel.changes
 
 
