@@ -29,14 +29,9 @@ Rectangle {
         }
     }
 
-    onWidthChanged: {
-        if (flickable.width < flickable.height) {
-            levelBall.width = flickable.width / 2
-        } else {
-            levelBall.width = flickable.height / 2
-        }
-        levelBall.height = levelBall.width
-    }
+    onWidthChanged: levelBall.setSize()
+
+    onHeightChanged: levelBall.setSize()
 
     Rectangle {
         id: levelTargetBall
@@ -45,17 +40,28 @@ Rectangle {
         y: parent.height / 2 - height / 2
         width: levelBall.width * 1.5
         height: levelBall.height * 1.5
-        radius: width
+        radius: width        
     }
 
     Rectangle {
         id: levelBall
+        width: parent.width / 2
+        height: width
         property double offsetX: 0.0
         property double offsetY: 0.0
         x: parent.width / 2 - width / 2 - (offsetX / 90.0) * (parent.width / 2)
         y: parent.height / 2 - height / 2 - (offsetY / 90.0) * (parent.height / 2)
         radius: width
         color: "#ccffffff"
+        function setSize() {
+            if (parent.width < parent.height) {
+                width = parent.width / 2
+            } else {
+                width = parent.height / 2
+            }
+            height = width
+        }
+
     }
 
     Rectangle {
