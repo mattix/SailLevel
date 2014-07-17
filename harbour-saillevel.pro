@@ -5,7 +5,7 @@ CONFIG += sailfishapp
 SOURCES += src/harbour-saillevel.cpp \
     src/settings.cpp
 
-OTHER_FILES += qml/SailLevel.qml \
+OTHER_FILES += qml/harbour-saillevel.qml \
     qml/cover/CoverPage.qml \
     qml/pages/LevelPage.qml \
     rpm/harbour-saillevel.spec \
