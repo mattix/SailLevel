@@ -30,17 +30,29 @@ Page {
         id: rotationSensor
         dataRate: 100
         active: true
+        property double calibrationFixX: 0.0
+        property double calibrationFixY: 0.0
 
         onReadingChanged: {
             text.text = "x: " + reading.x.toFixed(2) + " y: " + reading.y.toFixed(2) + " z: " + reading.z.toFixed(2)
-            levelBall.offsetY = reading.x
-            levelBall.offsetX = reading.y
+            levelBall.offsetY = reading.x + calibrationFixX
+            levelBall.offsetX = reading.y + calibrationFixY
         }
     }
 
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
+
+        PullDownMenu {
+            MenuItem {
+                text: qsTr("Calibrate")
+                onClicked: {
+                    rotationSensor.calibrationFixX = -rotationSensor.reading.x
+                    rotationSensor.calibrationFixY = -rotationSensor.reading.y
+                }
+            }
+        }
 
         onWidthChanged: {
             if (flickable.width < flickable.height) {
