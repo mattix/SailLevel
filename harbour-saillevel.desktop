@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
 X-Nemo-Application-Type=silica-qt5
-Icon=SailLevel
-Exec=SailLevel
-Name=SailLevel
+Icon=harbour-saillevel
+Exec=harbour-saillevel
+Name=harbour-saillevel
 
 #Name[fi]=SailLevel
 
