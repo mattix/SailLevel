@@ -14,7 +14,7 @@ public:
     double calibrationFixX();
     void setcalibrationFixX(double fixX);
     double calibrationFixY();
-    void setcalibrationFixY(double fixY);
+    void setcalibrationFixY(double fixY);    
 private:
     QSettings *qSettings;
     double currentCalibrationFixX, currentCalibrationFixY;
@@ -23,7 +23,7 @@ signals:
     void calibrationFixYChanged();
 
 public slots:
-
+    void loadSettings();
 };
 
 #endif // SETTINGS_H

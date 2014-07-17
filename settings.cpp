@@ -4,8 +4,7 @@ Settings::Settings(QObject *parent) :
     QObject(parent)
 {
     this->qSettings = new QSettings("mattix", "SailLevel", this);
-    this->currentCalibrationFixX = this->qSettings->value("fixX", 0.0).toDouble();
-    this->currentCalibrationFixY = this->qSettings->value("fixY", 0.0).toDouble();
+    loadSettings();
 }
 
 double Settings::calibrationFixX()
@@ -30,4 +29,10 @@ void Settings::setcalibrationFixY(double fixY)
     this->currentCalibrationFixY = fixY;
     this->qSettings->setValue("fixY", fixY);
     calibrationFixYChanged();
+}
+
+void Settings::loadSettings()
+{
+    this->currentCalibrationFixX = this->qSettings->value("fixX", 0.0).toDouble();
+    this->currentCalibrationFixY = this->qSettings->value("fixY", 0.0).toDouble();
 }
