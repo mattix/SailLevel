@@ -38,7 +38,7 @@ Page {
         active: true
 
         onReadingChanged: {
-            text.text = "x: " + reading.x.toFixed(2) + " y: " + reading.y.toFixed(2) + " z: " + reading.z.toFixed(2)
+            text.text = "x: " + (reading.x + settings.calibrationFixX).toFixed(2) + " y: " + (reading.y + settings.calibrationFixY).toFixed(2) + " z: " + reading.z.toFixed(2)
             levelBall.offsetY = reading.x + settings.calibrationFixX
             levelBall.offsetX = reading.y + settings.calibrationFixY
         }
@@ -96,8 +96,7 @@ Page {
             height: levelBall.height
             radius: width
             border.color: "black"
-            border.width: 5
-        }
+            border.width: 5        }
 
         Cross {
             anchors.horizontalCenter: parent.horizontalCenter
@@ -106,7 +105,10 @@ Page {
 
         Label {
             id: text
-            text: "x: 0.00 y: 0.00 z: 0.00"
+            text: ""
+            anchors.margins: 20
+            anchors.left: parent.left
+            anchors.top: parent.top
         }
     }
 }
