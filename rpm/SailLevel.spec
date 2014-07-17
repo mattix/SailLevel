@@ -13,8 +13,8 @@ Name:       SailLevel
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    SailLevel is a free spirit level app for Jolla
-Version:    0.1
-Release:    1
+Version:    0.1.2
+Release:    2
 Group:      Qt/Qt
 License:    GPLv3
 URL:        https://github.com/mattix/SailLevel
