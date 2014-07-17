@@ -34,8 +34,7 @@ Page {
             MenuItem {
                 text: qsTr("Calibrate")
                 onClicked: {
-                    levelItem.levelSettings.calibrationFixX = -rotationSensor.reading.x
-                    levelItem.levelSettings.calibrationFixY = -rotationSensor.reading.y
+                    levelItem.calibrate()
                 }
             }
         }
