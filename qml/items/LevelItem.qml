@@ -40,7 +40,7 @@ Rectangle {
 
     Rectangle {
         id: levelTargetBall
-        color: "gray"
+        color: "#cc555555"
         x: parent.width / 2 - width / 2
         y: parent.height / 2 - height / 2
         width: levelBall.width * 1.5
@@ -55,7 +55,7 @@ Rectangle {
         x: parent.width / 2 - width / 2 - (offsetX / 90.0) * (parent.width / 2)
         y: parent.height / 2 - height / 2 - (offsetY / 90.0) * (parent.height / 2)
         radius: width
-        color: "white"
+        color: "#ccffffff"
     }
 
     Rectangle {
