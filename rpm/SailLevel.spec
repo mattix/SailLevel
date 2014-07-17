@@ -16,8 +16,8 @@ Summary:    SailLevel is a free spirit level app for Jolla
 Version:    0.1
 Release:    1
 Group:      Qt/Qt
-License:    LICENSE
-URL:        http://example.org/
+License:    GPLv3
+URL:        https://github.com/mattix/SailLevel
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  SailLevel.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
@@ -28,7 +28,7 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
 
 %description
-Short description of my SailfishOS Application
+SailLevel is a free spirit level app for Jolla with calibration support.
 
 
 %prep
