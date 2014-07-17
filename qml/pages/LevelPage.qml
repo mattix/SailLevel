@@ -24,7 +24,7 @@ import Sailfish.Silica 1.0
 import "../items"
 
 Page {
-    id: page    
+    id: page
 
     SilicaFlickable {
         id: flickable
