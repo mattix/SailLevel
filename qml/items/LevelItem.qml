@@ -8,6 +8,11 @@ Rectangle {
     property alias levelSettings: settings
     property string levelValues: ""
 
+    function calibrate() {
+        settings.calibrationFixX = -rotationSensor.reading.x
+        settings.calibrationFixY = -rotationSensor.reading.y
+    }
+
     Settings {
         id: settings
     }
