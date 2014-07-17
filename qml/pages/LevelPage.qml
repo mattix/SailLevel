@@ -22,22 +22,25 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtSensors 5.0
+import mattix 1.0
 import "../items"
 
 Page {
     id: page
 
+    Settings {
+        id: settings
+    }
+
     RotationSensor {
         id: rotationSensor
         dataRate: 100
         active: true
-        property double calibrationFixX: 0.0
-        property double calibrationFixY: 0.0
 
         onReadingChanged: {
             text.text = "x: " + reading.x.toFixed(2) + " y: " + reading.y.toFixed(2) + " z: " + reading.z.toFixed(2)
-            levelBall.offsetY = reading.x + calibrationFixX
-            levelBall.offsetX = reading.y + calibrationFixY
+            levelBall.offsetY = reading.x + settings.calibrationFixX
+            levelBall.offsetX = reading.y + settings.calibrationFixY
         }
     }
 
@@ -49,8 +52,8 @@ Page {
             MenuItem {
                 text: qsTr("Calibrate")
                 onClicked: {
-                    rotationSensor.calibrationFixX = -rotationSensor.reading.x
-                    rotationSensor.calibrationFixY = -rotationSensor.reading.y
+                    settings.calibrationFixX = -rotationSensor.reading.x
+                    settings.calibrationFixY = -rotationSensor.reading.y
                 }
             }
         }
