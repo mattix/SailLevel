@@ -5,6 +5,7 @@ import mattix 1.0
 Rectangle {
     width: 320
     height: 240    
+    color: "#00000000"
     property string levelValues: ""
 
     function calibrate() {
