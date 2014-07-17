@@ -26,6 +26,8 @@ import "../items"
 Page {
     id: page
 
+    signal calibrated();
+
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
@@ -35,6 +37,7 @@ Page {
                 text: qsTr("Calibrate")
                 onClicked: {
                     levelItem.calibrate()
+                    calibrated()
                 }
             }
         }
