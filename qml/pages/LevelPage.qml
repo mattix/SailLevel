@@ -49,6 +49,7 @@ Page {
 
         Label {
             id: text
+            visible: false
             text: levelItem.levelValues
             anchors.margins: 20
             anchors.left: parent.left
