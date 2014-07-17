@@ -22,6 +22,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtSensors 5.0
+import "../items"
 
 Page {
     id: page
@@ -93,6 +94,11 @@ Page {
             radius: width
             border.color: "black"
             border.width: 5
+        }
+
+        Cross {
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
         }
 
         Label {
