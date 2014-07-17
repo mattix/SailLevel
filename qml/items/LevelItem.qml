@@ -8,6 +8,10 @@ Rectangle {
     color: "#00000000"
     property string levelValues: ""
 
+    function reloadSettings() {
+        settings.loadSettings()
+    }
+
     function calibrate() {
         settings.calibrationFixX = -rotationSensor.reading.x
         settings.calibrationFixY = -rotationSensor.reading.y
