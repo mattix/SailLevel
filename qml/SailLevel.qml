@@ -22,16 +22,20 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "pages"
+import "cover"
 
 ApplicationWindow
 {
     id: appWindow
     initialPage: Component
-    {
-        LevelPage
-        {
-            onCalibrated: appWindow.cover = Qt.resolvedUrl("cover/CoverPage.qml")
-        }
-    }
-    cover: Qt.resolvedUrl("cover/CoverPage.qml")
+                    {
+                        LevelPage
+                        {
+                            onCalibrated: {
+                                console.log("Calibrated")
+                                cover.level.reloadSettings()
+                            }
+                        }
+                    }
+    cover: CoverPage { }
 }
