@@ -41,6 +41,7 @@ Page {
 
         LevelItem {
             id: levelItem
+            anchors.fill: parent
         }
 
         Label {
