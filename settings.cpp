@@ -3,7 +3,7 @@
 Settings::Settings(QObject *parent) :
     QObject(parent)
 {
-    this->qSettings = new QSettings("mattix", "SailLevel", this);
+    this->qSettings = new QSettings("harbour-saillevel", "SailLevel", this);
     loadSettings();
 }
 
