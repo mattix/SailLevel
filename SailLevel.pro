@@ -25,7 +25,8 @@ OTHER_FILES += qml/SailLevel.qml \
     rpm/SailLevel.yaml \
     translations/*.ts \
     SailLevel.desktop \
-    qml/items/Cross.qml
+    qml/items/Cross.qml \
+    qml/items/LevelItem.qml
 
 CONFIG += sailfishapp_i18n
 #TRANSLATIONS += translations/SailLevel-de.ts
