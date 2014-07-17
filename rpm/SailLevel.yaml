@@ -12,7 +12,7 @@ License: GPLv3
 Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |
-  SailLevel is a free spirit level app for Jolla with calibration support.
+  SailLevel is a free spirit level app for Jolla with calibration and cover mode support.
 Configure: none
 # The qtc5 builder inserts macros to allow QtCreator to have fine
 # control over qmake/make execution

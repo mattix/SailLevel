@@ -28,7 +28,7 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
 
 %description
-SailLevel is a free spirit level app for Jolla with calibration support.
+SailLevel is a free spirit level app for Jolla with calibration and cover mode support.
 
 
 %prep
