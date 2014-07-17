@@ -46,7 +46,7 @@ Page {
 
         Label {
             id: text
-            text: ""
+            text: levelItem.levelValues
             anchors.margins: 20
             anchors.left: parent.left
             anchors.top: parent.top

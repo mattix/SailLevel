@@ -6,6 +6,7 @@ Rectangle {
     width: 320
     height: 240
     property alias levelSettings: settings
+    property string levelValues: ""
 
     Settings {
         id: settings
@@ -17,7 +18,7 @@ Rectangle {
         active: true
 
         onReadingChanged: {
-            text.text = "x: " + (reading.x + settings.calibrationFixX).toFixed(2) + " y: " + (reading.y + settings.calibrationFixY).toFixed(2) + " z: " + reading.z.toFixed(2)
+            levelValues = "x: " + (reading.x + settings.calibrationFixX).toFixed(2) + " y: " + (reading.y + settings.calibrationFixY).toFixed(2) + " z: " + reading.z.toFixed(2)
             levelBall.offsetY = reading.x + settings.calibrationFixX
             levelBall.offsetX = reading.y + settings.calibrationFixY
         }
