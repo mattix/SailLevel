@@ -26,5 +26,5 @@ import "pages"
 ApplicationWindow
 {
     initialPage: Component { LevelPage { } }
-    cover: Qt.resolvedUrl("CoverPage.qml")
+    cover: Qt.resolvedUrl("cover/CoverPage.qml")
 }
