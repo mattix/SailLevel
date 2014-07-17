@@ -24,6 +24,7 @@ import Sailfish.Silica 1.0
 import "../items"
 
 CoverBackground {
+    property alias level: levelItem
     LevelItem {
         id: levelItem
         anchors.fill: parent
