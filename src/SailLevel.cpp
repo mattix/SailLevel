@@ -30,7 +30,7 @@
 
 int main(int argc, char *argv[])
 {
-    qmlRegisterType<Settings>("mattix", 1, 0, "Settings");
+    qmlRegisterType<Settings>("harbour.saillevel.settings", 1, 0, "Settings");
 
     return SailfishApp::main(argc, argv);
 }

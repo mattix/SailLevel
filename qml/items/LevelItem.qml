@@ -1,6 +1,6 @@
 import QtQuick 2.0
 import QtSensors 5.0
-import mattix 1.0
+import harbour.saillevel.settings 1.0
 
 Rectangle {
     width: 320
