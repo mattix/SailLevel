@@ -29,7 +29,7 @@ OTHER_FILES += qml/SailLevel.qml \
     qml/items/LevelItem.qml
 
 CONFIG += sailfishapp_i18n
-#TRANSLATIONS += translations/SailLevel-de.ts
+TRANSLATIONS += translations/SailLevel-fi.ts
 
 HEADERS += \
     settings.h
