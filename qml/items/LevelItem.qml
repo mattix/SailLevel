@@ -4,8 +4,7 @@ import mattix 1.0
 
 Rectangle {
     width: 320
-    height: 240
-    property alias levelSettings: settings
+    height: 240    
     property string levelValues: ""
 
     function calibrate() {
