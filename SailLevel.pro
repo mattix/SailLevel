@@ -3,7 +3,7 @@ TARGET = SailLevel
 CONFIG += sailfishapp
 
 SOURCES += src/SailLevel.cpp \
-    settings.cpp
+    src/settings.cpp
 
 OTHER_FILES += qml/SailLevel.qml \
     qml/cover/CoverPage.qml \
@@ -21,5 +21,5 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/SailLevel-fi.ts
 
 HEADERS += \
-    settings.h
+    src/settings.h
 
