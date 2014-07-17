@@ -34,5 +34,7 @@ void Settings::setcalibrationFixY(double fixY)
 void Settings::loadSettings()
 {
     this->currentCalibrationFixX = this->qSettings->value("fixX", 0.0).toDouble();
+    calibrationFixXChanged();
     this->currentCalibrationFixY = this->qSettings->value("fixY", 0.0).toDouble();
+    calibrationFixYChanged();
 }
