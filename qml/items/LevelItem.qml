@@ -56,7 +56,7 @@ Rectangle {
         x: parent.width / 2 - width / 2 - (offsetX / 90.0) * (parent.width / 2)
         y: parent.height / 2 - height / 2 - (offsetY / 90.0) * (parent.height / 2)
         radius: width
-        color: "#ccffffff"
+        color: "#8484ffff"
         function setSize() {
             if (parent.width < parent.height) {
                 width = parent.width / 2
@@ -76,10 +76,11 @@ Rectangle {
         width: levelBall.width
         height: levelBall.height
         radius: width
-        border.color: "black"
+        border.color: "#88000000"
         border.width: 5        }
 
     Cross {
+        crossColor: "#88000000"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
     }
