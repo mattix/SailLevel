@@ -3,7 +3,7 @@ Type=Application
 X-Nemo-Application-Type=silica-qt5
 Icon=harbour-saillevel
 Exec=harbour-saillevel
-Name=harbour-saillevel
+Name=SailLevel
 
 #Name[fi]=SailLevel
 
