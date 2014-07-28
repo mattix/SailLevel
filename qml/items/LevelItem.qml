@@ -9,6 +9,13 @@ Rectangle {
     property string levelValues: ""
     property bool sideWays: false
 
+    Item {
+        id: lastReading
+        property double readingX: 0.0
+        property double readingY: 0.0
+        property double readingZ: 0.0
+    }
+
     function reloadSettings() {
         settings.loadSettings()
     }
@@ -16,6 +23,7 @@ Rectangle {
     function calibrate() {
         settings.calibrationFixX = -rotationSensor.reading.x
         settings.calibrationFixY = -rotationSensor.reading.y
+        //settings.calibrationFixZ = -rotationSensor.reading.z
     }
 
     Settings {
@@ -29,8 +37,10 @@ Rectangle {
 
         onReadingChanged: {
             levelValues = "x: " + (reading.x + settings.calibrationFixX).toFixed(2) + " y: " + (reading.y + settings.calibrationFixY).toFixed(2) + " z: " + reading.z.toFixed(2)
-            levelBall.offsetY = reading.x + settings.calibrationFixX
-            levelBall.offsetX = reading.y + settings.calibrationFixY
+            lastReading.readingX = reading.x + settings.calibrationFixX
+            lastReading.readingY = reading.y + settings.calibrationFixY
+            lastReading.readingZ = reading.z
+            //lastReading.z = reading.z + settings.calibrationFixZ
             sideWays = reading.y > 70 || reading.y < -70
         }
     }
@@ -44,6 +54,35 @@ Rectangle {
         anchors.fill: parent
         color: "#00000000"
         visible: sideWays
+
+        Rectangle {
+            id: levelTargetRectangle
+            color: "#cc555555"
+            x: parent.width / 2 - width / 2
+            y: parent.height / 2 - height / 2
+            width: sideWaysLevelRectangle.width * 1.5
+            height: sideWaysLevelRectangle.height * 1.5
+        }
+
+        Rectangle {
+            id: sideWaysLevelRectangle
+            width: parent.width / 2
+            height: parent.height / 2
+            x: parent.width / 2 - width / 2
+            y: parent.height / 2 - height / 2
+            color: "#8484ffff"
+        }
+
+        Rectangle {
+            id: levelTargetBorderRectangle
+            color: "#00000000"
+            x: parent.width / 2 - width / 2
+            y: parent.height / 2 - height / 2
+            width: sideWaysLevelRectangle.width
+            height: sideWaysLevelRectangle.height
+            border.color: "#88000000"
+            border.width: 5
+        }
     }
 
     Rectangle {
@@ -66,8 +105,8 @@ Rectangle {
             id: levelBall
             width: parent.width / 2
             height: width
-            property double offsetX: 0.0
-            property double offsetY: 0.0
+            property double offsetX: lastReading.readingY
+            property double offsetY: lastReading.readingX
             x: parent.width / 2 - width / 2 - (offsetX / 90.0) * (parent.width / 2)
             y: parent.height / 2 - height / 2 - (offsetY / 90.0) * (parent.height / 2)
             radius: width
